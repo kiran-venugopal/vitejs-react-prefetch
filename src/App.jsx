@@ -2,9 +2,14 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import { Suspense } from "react";
 
-const Home = React.lazy(() => import("./Home"));
-const Users = React.lazy(() => import("./Users"));
-const About = React.lazy(() => import("./About"));
+const homePromise = import("./Home");
+const Home = React.lazy(() => homePromise);
+
+const usersPromise = import("./Users");
+const Users = React.lazy(() => usersPromise);
+
+const aboutPromise = import("./About");
+const About = React.lazy(() => aboutPromise);
 
 const App = () => {
   return (
