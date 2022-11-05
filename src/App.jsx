@@ -4,7 +4,7 @@ import { Suspense } from "react";
 
 const Home = React.lazy(() => import("./Home"));
 const Users = React.lazy(() => import("./Users"));
-const About = React.lazy(() => import("./Users"));
+const About = React.lazy(() => import("./About"));
 
 const App = () => {
   return (
